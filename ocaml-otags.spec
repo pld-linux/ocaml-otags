@@ -2,13 +2,14 @@ Summary:	OCaml tags
 Summary(pl):	OCaml tags
 Name:		ocaml-otags
 Version:	3.04.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.multimania.com/moninjf/Ocaml/otags-%{version}.tar.gz
 Patch0:		%{name}-vi.patch
+Patch1:		%{name}-ocaml-3.05.patch
 URL:		http://www.multimania.com/moninjf/Ocaml/
-BuildRequires:	ocaml-camlp4 >= 3.04-2
+BuildRequires:	ocaml-camlp4 >= 3.05
 %requires_eq	ocaml-camlp4
 Obsoletes:	otags
 Provides:	otags
@@ -23,6 +24,7 @@ Program do robienia tagów dla Emacsa i Vi do kodu ¼ród³owego w OCamlu.
 %prep
 %setup -q -n otags-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 # don't use %%configure
