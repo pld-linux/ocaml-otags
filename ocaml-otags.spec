@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://perso.wanadoo.fr/cuihtlauac.alvarado/otags-%{version}.tar.gz
+Patch0:		%{name}-vi.patch
 Vendor:		Cuihtlauac Alvardo <cuihtlauac.alvarado@francetelecom.com>
 BuildRequires:	ocaml-camlp4 >= 3.05
 %requires_eq	ocaml-camlp4
@@ -21,6 +22,7 @@ Program do tworzenia tagów dla Emacsa i Vi do kodu ¼ród³owego w OCamlu.
 
 %prep
 %setup -q -n otags-%{version}
+%patch0 -p1
 
 %build
 # don't use %%configure
