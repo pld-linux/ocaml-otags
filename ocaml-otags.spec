@@ -1,7 +1,7 @@
 Summary:	OCaml tags
 Summary(pl):	Tagi dla OCamla
 Name:		ocaml-otags
-Version:	3.06.4
+Version:	3.06.5
 Release:	1
 License:	GPL
 Group:		Development/Tools
