@@ -26,9 +26,9 @@ diff -ur otags-3.04.3/otags.ml otags-3.04.3-/otags.ml
    targets (), Suffix.contents (), !rcamlp4, parsers
  
  let camlp4_libs pr_tags = parsers @ [ pr_tags ]
-diff -ur otags-3.04.3/vi.ml otags-3.04.3-/vi.ml
+diff -ur otags-3.04.3/vi.ml otags-3.04.3+vi/vi.ml
 --- otags-3.04.3/vi.ml	Mon Oct 22 14:54:43 2001
-+++ otags-3.04.3-/vi.ml	Sun Nov 10 13:55:11 2002
++++ otags-3.04.3+vi/vi.ml	Mon Nov 11 21:50:55 2002
 @@ -3,10 +3,6 @@
  
  (* $Id$ *)
@@ -48,7 +48,7 @@ diff -ur otags-3.04.3/vi.ml otags-3.04.3-/vi.ml
  module Line : sig
    val lookup : string * int -> unit
    val of_pos : int -> int * int
-@@ -60,51 +57,63 @@
+@@ -60,51 +57,65 @@
    let add etag (loc, last) =
      lifo := (etag, loc, last) :: !lifo; set_size_ml last
  
@@ -58,8 +58,10 @@ diff -ur otags-3.04.3/vi.ml otags-3.04.3-/vi.ml
 +    let part_es = String.escaped s in
 +    let buffer = Buffer.create (String.length part_es) in
 +    String.iter (fun c ->
-+                   match c with
-+                   | '.' | '$' | '*' | '[' | ']' | '/' | '\\' -> 
++                   (* There is no need to quote anything else.
++                      Vim does matching with 'nomagic' option set. *)
++                   match c with 
++                   | '$' | '/' | '\\' -> 
 +                       Buffer.add_char buffer '\\';
 +                       Buffer.add_char buffer c
 +                   | _ -> Buffer.add_char buffer c)
