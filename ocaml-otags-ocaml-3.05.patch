@@ -1,0 +1,15 @@
+diff -ur otags-3.04.3/pr.ml otags-3.04.3-/pr.ml
+--- otags-3.04.3/pr.ml	Fri Feb  1 17:11:34 2002
++++ otags-3.04.3-/pr.ml	Thu Aug  8 15:36:39 2002
+@@ -101,9 +101,10 @@
+  * allowed in type annotations, not in class type definitions 
+  *)
+     | <:class_type< [ $typ$ ] -> $ct$ >> -> ()
+-
++(*
+     | <:class_type< object $cst$ $list:csf$ end >> -> 
+ 	List.iter pe_class_sig_item csf
++       *)
+ 
+ 
+ let etag_class_type_info   
