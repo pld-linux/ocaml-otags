@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://perso.rd.francetelecom.fr/alvarado/soft/otags-%{version}.tar.gz
+# Source0-md5:	ad5d661751578d40f53c85bf2e12cabd
 Vendor:		Cuihtlauac Alvardo <cuihtlauac.alvarado@francetelecom.com>
 BuildRequires:	ocaml-camlp4 >= 3.05
 %requires_eq	ocaml-camlp4
