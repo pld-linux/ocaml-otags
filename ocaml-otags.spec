@@ -1,11 +1,11 @@
 Summary:	OCaml tags
 Summary(pl):	Tagi dla OCamla
 Name:		ocaml-otags
-Version:	3.06.5
+Version:	3.06.7
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://perso.wanadoo.fr/cuihtlauac.alvarado/otags-%{version}.tar.gz
+Source0:	http://perso.rd.francetelecom.fr/alvarado/soft/otags-%{version}.tar.gz
 Vendor:		Cuihtlauac Alvardo <cuihtlauac.alvarado@francetelecom.com>
 BuildRequires:	ocaml-camlp4 >= 3.05
 %requires_eq	ocaml-camlp4
