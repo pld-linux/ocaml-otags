@@ -2,7 +2,7 @@ Summary:	OCaml tags
 Summary(pl):	Tagi dla OCamla
 Name:		ocaml-otags
 Version:	3.06.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://perso.rd.francetelecom.fr/alvarado/soft/otags-%{version}.tar.gz
