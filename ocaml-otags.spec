@@ -1,14 +1,12 @@
 Summary:	OCaml tags
-Summary(pl):	OCaml tags
+Summary(pl):	Tagi dla OCamla
 Name:		ocaml-otags
-Version:	3.04.3
-Release:	3
+Version:	3.06.2
+Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://www.multimania.com/moninjf/Ocaml/otags-%{version}.tar.gz
-Patch0:		%{name}-vi.patch
-Patch1:		%{name}-ocaml-3.05.patch
-URL:		http://www.multimania.com/moninjf/Ocaml/
+Source0:	http://perso.wanadoo.fr/cuihtlauac.alvarado/otags-%{version}.tar.gz
+Vendor:		Cuihtlauac Alvardo <cuihtlauac.alvarado@francetelecom.com>
 BuildRequires:	ocaml-camlp4 >= 3.05
 %requires_eq	ocaml-camlp4
 Obsoletes:	otags
@@ -19,12 +17,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Program for making tags for Emacs and Vi, for OCaml source code.
 
 %description -l pl
-Program do robienia tagów dla Emacsa i Vi do kodu ¼ród³owego w OCamlu.
+Program do tworzenia tagów dla Emacsa i Vi do kodu ¼ród³owego w OCamlu.
 
 %prep
 %setup -q -n otags-%{version}
-%patch0 -p1
-%patch1 -p1
 
 %build
 # don't use %%configure
@@ -38,13 +34,11 @@ rm -rf $RPM_BUILD_ROOT
 	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
 	INSTALLIBDIR=$RPM_BUILD_ROOT%{_libdir}/ocaml
 
-gzip -9nf README HISTORY
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README HISTORY
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/ocaml/*
