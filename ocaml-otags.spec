@@ -2,7 +2,7 @@ Summary:	OCaml tags
 Summary(pl):	OCaml tags
 Name:		ocaml-otags
 Version:	3.04.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.multimania.com/moninjf/Ocaml/otags-%{version}.tar.gz
