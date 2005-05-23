@@ -1,12 +1,12 @@
 Summary:	OCaml tags
 Summary(pl):	Tagi dla OCamla
 Name:		ocaml-otags
-Version:	3.06.8
-Release:	3
+Version:	3.08.0.1
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://perso.rd.francetelecom.fr/alvarado/soft/otags-%{version}.tar.gz
-# Source0-md5:	713550d6d81851c3dace28c424249118
+# Source0-md5:	180f0a70e4da8864cbf35fd3022e63db
 Vendor:		Cuihtlauac Alvardo <cuihtlauac.alvarado@francetelecom.com>
 BuildRequires:	ocaml-camlp4 >= 3.07
 %requires_eq	ocaml-camlp4
@@ -24,6 +24,7 @@ Program do tworzenia tagów dla Emacsa i Vi do kodu ¼ród³owego w OCamlu.
 %setup -q -n otags-%{version}
 
 %build
+sed -i -e s:/usr/local/:/usr/:g Makefile.depend
 # don't use %%configure
 ./configure --prefix %{_prefix}
 %{__make}
@@ -33,7 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
-	INSTALLIBDIR=$RPM_BUILD_ROOT%{_libdir}/ocaml
+	INSTALLLIBDIR=$RPM_BUILD_ROOT%{_libdir}/ocaml
 
 %clean
 rm -rf $RPM_BUILD_ROOT
