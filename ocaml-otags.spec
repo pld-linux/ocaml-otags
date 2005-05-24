@@ -2,7 +2,7 @@ Summary:	OCaml tags
 Summary(pl):	Tagi dla OCamla
 Name:		ocaml-otags
 Version:	3.08.0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://perso.rd.francetelecom.fr/alvarado/soft/otags-%{version}.tar.gz
@@ -24,7 +24,7 @@ Program do tworzenia tagów dla Emacsa i Vi do kodu ¼ród³owego w OCamlu.
 %setup -q -n otags-%{version}
 
 %build
-sed -i -e s:/usr/local/:/usr/:g Makefile.depend
+sed -i -e s:/usr/local/:/usr/:g -e s:/lib/:/%{_lib}/:g Makefile.depend
 # don't use %%configure
 ./configure --prefix %{_prefix}
 %{__make}
