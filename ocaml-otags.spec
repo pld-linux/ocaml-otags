@@ -1,5 +1,5 @@
 Summary:	OCaml tags
-Summary(pl):	Tagi dla OCamla
+Summary(pl.UTF-8):   Tagi dla OCamla
 Name:		ocaml-otags
 Version:	3.08.0.1
 Release:	6
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Program for making tags for Emacs and Vi, for OCaml source code.
 
-%description -l pl
-Program do tworzenia tagÛw dla Emacsa i Vi do kodu ºrÛd≥owego w OCamlu.
+%description -l pl.UTF-8
+Program do tworzenia tag√≥w dla Emacsa i Vi do kodu ≈∫r√≥d≈Çowego w OCamlu.
 
 %prep
 %setup -q -n otags-%{version}
