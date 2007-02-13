@@ -1,5 +1,5 @@
 Summary:	OCaml tags
-Summary(pl.UTF-8):   Tagi dla OCamla
+Summary(pl.UTF-8):	Tagi dla OCamla
 Name:		ocaml-otags
 Version:	3.08.0.1
 Release:	6
